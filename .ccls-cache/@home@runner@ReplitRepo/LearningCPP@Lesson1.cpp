@@ -23,7 +23,7 @@ int main() {
 
   cout << "write an int  pls : ";
   int userValue{};
-  //cin >> userValue;
+  // cin >> userValue;
 
   cout << "user value is : " << userValue << endl;
   return 0;

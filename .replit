@@ -1,19 +1,19 @@
-compile = "g++ LearningCPP/Lesson1.cpp -o main && ./main"
+compile = "g++ LearningCPP/Lesson1.cpp  -o main && ./main"
 run = ""
-entrypoint = "Test.cpp"
+entrypoint = "Lesson1.cpp"
 hidden = ["main", "**/*.o", "**/*.d", ".ccls-cache", "Makefile"]
 
-[nix]
-channel = "stable-22_11"
+[languages.cpp]
+pattern = "**/*.{cpp,h}"
 
-[gitHubImport]
-requiredFiles = [".replit", "replit.nix", ".ccls-cache"]
+[languages.cpp.languageServer]
+start = "ccls"
 
 [debugger]
 support = true
 
 [debugger.compile]
-command = ["make", "main-debug"]
+command = ["make"]
 noFileArgs = true
 
 [debugger.interactive]
@@ -51,18 +51,10 @@ externalConsole = false
 logging = {}
 miDebuggerPath = "gdb"
 name = "g++ - Build and debug active file"
-program = "./main-debug"
+program = "./main"
 request = "launch"
 setupCommands = [
-	{ description = "Enable pretty-printing for gdb", ignoreFailures = true, text = "-enable-pretty-printing" }
+    { description = "Enable pretty-printing for gdb", ignoreFailures = true, text = "-enable-pretty-printing" }
 ]
 stopAtEntry = false
 type = "cppdbg"
-
-[languages]
-
-[languages.cpp]
-pattern = "**/*.{cpp,h}"
-
-[languages.cpp.languageServer]
-start = "ccls"
