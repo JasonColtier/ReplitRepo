@@ -1,4 +1,4 @@
-compile = "g++ LearningCPP/L4_DataTypes/Lesson4.cpp -std=c++17 -o main && ./main"
+compile = "g++ LearningCPP/L8/Template.cpp -std=c++17 -o main && ./main"
 run = ""
 entrypoint = "Lesson2.cpp"
 hidden = ["main", "**/*.o", "**/*.d", ".ccls-cache", "Makefile"]
