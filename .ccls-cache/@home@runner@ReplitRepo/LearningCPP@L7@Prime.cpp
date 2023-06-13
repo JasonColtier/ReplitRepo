@@ -3,10 +3,19 @@
 
 bool isPrime(int x)
 {
+  if(x <=1){
+    std::cout<<"less or 1 \n";
+    return false;
+  }
 
-  for (int i = 1;i<x;i++){
-
+  if(x==2)
+    return true;
     
+  for (int i = 2;i<x;i++){
+    if(x%i==0){
+      std::cout<<"not prime! "<<x<<"/"<<i<<"=0 \n";
+      return false;
+    }  
   }
   
   return true;
