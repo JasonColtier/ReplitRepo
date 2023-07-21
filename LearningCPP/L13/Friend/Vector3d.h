@@ -1,0 +1,26 @@
+//
+// Created by User on 21/07/2023.
+//
+
+#ifndef REPLITREPO_VECTOR3D_H
+#define REPLITREPO_VECTOR3D_H
+
+#include "Point3d.h"
+
+class Vector3d {
+
+private:
+    double m_x{};
+    double m_y{};
+    double m_z{};
+
+public:
+    Vector3d(double x = 0.0, double y = 0.0, double z = 0.0);
+
+    void print() const;
+
+    friend void Point3d::moveByVector(const Vector3d& v);
+};
+
+
+#endif //REPLITREPO_VECTOR3D_H
