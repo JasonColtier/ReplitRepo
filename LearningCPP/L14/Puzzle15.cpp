@@ -1,6 +1,7 @@
 
 #include "Tile.h"
 #include "Board.h"
+#include "UserInput.h"
 
 int main(){
 
@@ -17,6 +18,21 @@ int main(){
 
     Board board{};
     std::cout << board;
+
+
+    while (true){
+        char key {UserInput::getCommandFromUser()};
+
+        //performe movement
+
+        if(key == 'f'){
+            std::cout<<"bye";
+            return 0;
+        }
+
+        Direction direction {UserInput::ConvertCommandToDirection(key)};
+        std::cout<<"you entered direction : " <<direction <<"\n";
+    }
 
 
     return 0;

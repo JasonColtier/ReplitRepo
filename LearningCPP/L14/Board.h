@@ -33,7 +33,11 @@ public:
     }
 
 private:
+
+    //the size of the board
     static constexpr int m_sizeGrid = 4;
+
+    //our board
     Tile* m_tiles[m_sizeGrid][m_sizeGrid]{};
 
 };
