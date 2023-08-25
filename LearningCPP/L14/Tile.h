@@ -11,7 +11,13 @@
 class Tile {
 
 public:
-    explicit Tile(int value) : m_value(value) {}
+    explicit Tile(int value) : m_value(value) {
+//        std::cout<<"new tile with value"<<getNum()<<"\n";
+    }
+
+    ~Tile(){
+//        std::cout<<"delete tile with value"<<getNum()<<"\n";
+    }
 
     int getNum() const { return m_value; };
     //Point2D getPosition();
@@ -21,6 +27,7 @@ public:
     };
 
     friend std::ostream& operator<<(std::ostream& ostream,const Tile& tile);
+
 
 
 private:

@@ -6,6 +6,7 @@
 #define REPLITREPO_DIRECTION_H
 
 #include "Random.h"
+#include "iostream"
 
 class Direction {
 

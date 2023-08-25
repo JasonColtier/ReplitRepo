@@ -17,21 +17,30 @@ int main(){
 //    std::cout << "Tile 2 has number: " << tile2.getNum() << "\nTile 4 has number: " << tile4.getNum() << '\n';
 
     Board board{};
+    board.randomizeBoard();
     std::cout << board;
+
 
 
     while (true){
         char key {UserInput::getCommandFromUser()};
 
-        //performe movement
+        //perform movement
+        Direction direction {UserInput::ConvertCommandToDirection(key)};
+        std::cout<<"you entered direction : " <<direction <<"\n";
+
+        board.moveTile(direction);
+        std::cout<<board;
+
+        if(board.isPuzzleSolved()){
+            std::cout<<"you won !!";
+            return 0;
+        }
 
         if(key == 'f'){
             std::cout<<"bye";
             return 0;
         }
-
-        Direction direction {UserInput::ConvertCommandToDirection(key)};
-        std::cout<<"you entered direction : " <<direction <<"\n";
     }
 
 
