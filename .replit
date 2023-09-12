@@ -1,4 +1,4 @@
-compile = "g++ LearningCPP/L18/Quiz.cpp -std=c++20 -o main && ./main"
+compile = "g++ LearningCPP/L26/Quiz.cpp -std=c++20 -o main && ./main"
 run = ""
 entrypoint = ""
 hidden = ["main", "**/*.o", "**/*.d", ".ccls-cache", "Makefile"]
